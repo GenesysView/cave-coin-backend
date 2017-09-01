@@ -1,4 +1,4 @@
-var config = {};
+/* var config = {};
 if (process.env.NODE_ENV == 'pro') {
   config = {
     server: {
@@ -25,6 +25,13 @@ if (process.env.NODE_ENV == 'test') {
     },
     secret: 'chatsure2018'
   }
-}
+} */
 
+var   config = {
+  server: {
+    host: 'localhost',
+    port: process.env.PORT || 3010
+  },
+  secret: 'chatsure2017'
+}
 module.exports = config
