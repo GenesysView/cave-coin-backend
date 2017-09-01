@@ -3,10 +3,15 @@ var User = require('../../models/users/model.users.js');
 var Login = require('../../models/logins/model.logins');
 
 module.exports.index = function (req, res) {
-    res.json({
-        success: true,
-        message: 'api cargado',
-        token: 'token'
+    User.find(function (err, office) {
+        if (err) {
+        // Note that this error doesn't mean nothing was found,
+        // it means the database had an error while searching, hence the 500 status
+            res.status(500).send(err)
+        } 
+        console.log(office);
+         
+        res.send(office);
     });
 }
 
