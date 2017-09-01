@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 
 var db = {
     Mongoose:mongoose,
-    mongoose: mongoose.connect('mongodb://localhost/facemappdb')
+    mongoose: mongoose.connect('mongodb://localhost/facemappdb',{
+        useMongoClient: true,
+    })
 };
 
 module.exports = db;
