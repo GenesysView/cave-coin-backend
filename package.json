@@ -1,31 +1,23 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "6.11.1"
-  },
-  "main": "index.js",
+  "name": "chatsure-backend",
+  "version": "1.0.0",
+  "description": "backend de chatsure",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "author": "miguel angel asprilla - 3154292549 - softdev",
+  "license": "MIT",
   "dependencies": {
-    "ejs": "2.5.6",
-    "express": "4.15.2"
-  },
-  "devDependencies": {
-    "request": "^2.81.0",
-    "tape": "^4.7.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+    "express": "^4.15.2",
+    "isomorphic-fetch": "2.2.1",
+    "jsdom": "9.4.2",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.9.4",
+    "mysql": "^2.13.0",
+    "mysql2": "^1.2.0",
+    "sequelize": "^3.30.2",
+    "socket.io": "^1.7.3"
+  }
 }
