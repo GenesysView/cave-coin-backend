@@ -23,7 +23,7 @@ if (process.env.NODE_ENV == 'test') {
       host: 'localhost',
       port: process.env.PORT || 3020
     },
-    secret: 'chatsure2017'
+    secret: 'chatsure2018'
   }
 }
 
