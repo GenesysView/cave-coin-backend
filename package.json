@@ -10,6 +10,7 @@
   "author": "miguel angel asprilla - 3154292549 - softdev",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.2",
     "isomorphic-fetch": "2.2.1",
     "jsdom": "9.4.2",
