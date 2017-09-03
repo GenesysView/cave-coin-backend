@@ -10,7 +10,8 @@ var UserTable = db.mongoose.Schema({
     picture:String,
     description:String,
     facebook:String,
-    categorias:[]
+    categorias:[],
+    adress:String
 });
 var User = db.mongoose.model('users', UserTable);
 

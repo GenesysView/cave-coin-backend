@@ -17,6 +17,8 @@ module.exports.index = function (req, res) {
 }
 
 module.exports.show = function (req, res) {
+    console.log('officina buscada');
+    console.log(req.params.id)
     Office.find({_id:req.params.id},function (err, office) {
         if (err) {
         // Note that this error doesn't mean nothing was found,
@@ -152,7 +154,7 @@ module.exports.officesanduser = function (req, res) {
             // it means the database had an error while searching, hence the 500 status
                 res.status(500).send(err)
             }
-            console.log('user'); 
+            console.log('user combinado'); 
             console.log(user);
              
             
@@ -160,16 +162,16 @@ module.exports.officesanduser = function (req, res) {
                 console.log(user[x]);
                 var categorias=user[x].categorias;
                 for(var y=0;y<categorias.length;y++){
-                    list.push({id:user[x]._id,name:categorias[y],tipe:1});
+                    list.push({id:user[x]._id,name:user[x].name,cate:categorias[y],tipe:1,adress:user[x].adress});
                 }
             }
             res.send(list);
             
         });
-        console.log('office'); 
-        console.log(office);
+        //console.log('office combinado'); 
+        //console.log(office);
         for(var x=0;x<office.length;x++){
-            list.push({id:office[x]._id,name:office[x].name,tipe:0});
+            list.push({id:office[x]._id,name:office[x].name,cate:office[x].name,tipe:0,adress:office[x].adress});
         }
          
     });

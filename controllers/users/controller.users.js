@@ -30,6 +30,7 @@ module.exports.show = function (req, res) {
 }
 
 module.exports.create = function (req, res) {
+    console.log('user save');
     console.log(req.body.user);
     var user = new User(req.body.user);
     user.save(function (err) {
@@ -99,15 +100,15 @@ module.exports.create = function (req, res) {
         var query = { _id: req.params.id };        
          User.findOneAndUpdate(query, { $set: { nameUser: req.body.user.name,name: req.body.user.nameUser,
             facebook: req.body.user.facebook,description: req.body.user.description,
-            categorias:req.body.user.categorias }}, function(error,officeupdate){
-            if (error) {
+            categorias:req.body.user.categorias }}, function(err,officeupdate){
+            if (err) {
                 // Note that this error doesn't mean nothing was found,
                 // it means the database had an error while searching, hence the 500 status
                     res.status(500).send(err)
                 } 
                 console.log(',iguel.');
                 console.log(officeupdate);
-                res.status(202);
+                //res.status(202);
                 res.json({
                     success: true,
                     message: 'Perfil Actualizado'
