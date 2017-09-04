@@ -99,7 +99,7 @@ module.exports.saveCalificacion = function (req, res) {
         console.log(office);
 
         var query = { _id: req.body.idOffice };        
-        Office.findOneAndUpdate(query, { $set: { calificaciones: office[0].calificaciones }}, function(error,officeupdate){
+        Office.findOneAndUpdate(query, { $set: { calificaciones: office.calificaciones }}, function(error,officeupdate){
             if (err) {
                 // Note that this error doesn't mean nothing was found,
                 // it means the database had an error while searching, hence the 500 status
