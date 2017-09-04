@@ -154,7 +154,7 @@ module.exports.officesanduser = function (req, res) {
             // it means the database had an error while searching, hence the 500 status
                 res.status(500).send(err)
             }
-            console.log('user combinado'); 
+            console.log('user combinadoo'); 
             console.log(user);
              
             
