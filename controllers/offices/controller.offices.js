@@ -17,7 +17,7 @@ module.exports.index = function (req, res) {
 }
 
 module.exports.show = function (req, res) {
-    console.log('officina buscadaaaaa');
+    console.log('officina buscada');
     console.log(req.params.id)
     Office.find({_id:req.params.id},function (err, office) {
         if (err) {
