@@ -123,7 +123,10 @@ module.exports.getCalificacion = function (req, res) {
             res.status(500).send(err)
         } 
         console.log('calificacion');
-        console.log(office);        
+        console.log(office);
+        if(office.calificaciones==null){
+            office.calificaciones=new Array();
+        }        
         office.calificaciones.push({idOffice:req.body.idOffice,idUser:req.body.idUser,puntaje:req.body.puntaje});  
         console.log(office);
 
