@@ -144,7 +144,7 @@ module.exports.officesanduser = function (req, res) {
     var palabra=/^soft/i ;
     console.log(palabra);
     console.log('entro');
-    Office.find(function (err, office) {
+    Office.find({name: new RegExp("^"+req.params.name,'i')},function (err, office) {
         var list=new Array();
         if (err) {
         // Note that this error doesn't mean nothing was found,
@@ -152,7 +152,9 @@ module.exports.officesanduser = function (req, res) {
             res.status(500).send(err)
         } 
 
-        User.find(function (err, user) {
+        //res.send(office);
+ 
+        User.find({ $or: [ {categorias: new RegExp("^"+req.params.name,'i')}, { name: new RegExp("^"+req.params.name,'i') } ] },function (err, user) {
             if (err) {
             // Note that this error doesn't mean nothing was found,
             // it means the database had an error while searching, hence the 500 status
@@ -162,20 +164,19 @@ module.exports.officesanduser = function (req, res) {
             console.log(user);
              
             
-            for(var x=0;x<user.length;x++){
+             for(var x=0;x<user.length;x++){
                 console.log(user[x]);
                 var categorias=user[x].categorias;
-                for(var y=0;y<categorias.length;y++){
-                    list.push({id:user[x]._id,name:user[x].name,cate:categorias[y],tipe:1,adress:user[x].adress});
-                }
+                    list.push({id:user[x]._id,name:user[x].name,tipe:1,adress:user[x].adress});
+                
             }
             res.send(list);
             
-        });
-        //console.log('office combinado'); 
-        //console.log(office);
+        }); 
+        console.log('office combinado'); 
+        console.log(office);
         for(var x=0;x<office.length;x++){
-            list.push({id:office[x]._id,name:office[x].name,cate:office[x].name,tipe:0,adress:office[x].adress});
+            list.push({id:office[x]._id,name:office[x].name,tipe:0,adress:office[x].adress});
         }
          
     });
