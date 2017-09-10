@@ -130,9 +130,9 @@ module.exports.getCalificacion = function (req, res) {
         if(office[0].calificaciones==null){
             office[0].calificaciones=new Array();
         }
-        if(req.body!=null){        
+/*         if(req.body!=null){        
             office[0].calificaciones.push({idOffice:req.body.idOffice,idUser:req.body.idUser,puntaje:req.body.puntaje});  
-        }
+        } */
         console.log('calificacionn2');
         console.log(office[0]);
 
