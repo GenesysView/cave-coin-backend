@@ -25,6 +25,9 @@ module.exports.show = function (req, res) {
         // it means the database had an error while searching, hence the 500 status
             res.status(500).send(err)
         } 
+        if(office.calificaciones==null){
+            office.calificaciones=new Array();
+        }  
         console.log(office);
          
         res.send(office);
