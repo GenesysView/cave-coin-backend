@@ -117,8 +117,8 @@ module.exports.saveCalificacion = function (req, res) {
 }
 
 module.exports.getCalificacion = function (req, res) {
-    console.log('office');
-    console.log(req.body);
+    //console.log('office');
+    //console.log(req.body);
     Office.find({_id:req.params.idOffice},function (err, office) {
         if (err) {
         // Note that this error doesn't mean nothing was found,
@@ -127,10 +127,11 @@ module.exports.getCalificacion = function (req, res) {
         } 
         console.log('calificacionn');
         console.log(office);
-        if(office[0].calificaciones==null){
-            office[0].calificaciones=new Array();
+        if(office.calificaciones==null){
+            office.calificaciones=new Array();
         }        
         office.calificaciones.push({idOffice:req.body.idOffice,idUser:req.body.idUser,puntaje:req.body.puntaje});  
+        console.log('calificacionn2');
         console.log(office);
 
 
