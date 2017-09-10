@@ -122,7 +122,7 @@ module.exports.getCalificacion = function (req, res) {
         // it means the database had an error while searching, hence the 500 status
             res.status(500).send(err)
         } 
-        console.log('calificacion');
+        console.log('calificacionn');
         console.log(office);
         if(office.calificaciones==null){
             office.calificaciones=new Array();
