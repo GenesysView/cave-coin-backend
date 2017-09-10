@@ -127,8 +127,8 @@ module.exports.getCalificacion = function (req, res) {
         } 
         console.log('calificacionn');
         console.log(office);
-        if(office.calificaciones==null){
-            office.calificaciones=new Array();
+        if(office[0].calificaciones==null){
+            office[0].calificaciones=new Array();
         }        
         office.calificaciones.push({idOffice:req.body.idOffice,idUser:req.body.idUser,puntaje:req.body.puntaje});  
         console.log(office);
