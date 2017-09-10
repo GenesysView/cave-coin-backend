@@ -126,13 +126,13 @@ module.exports.getCalificacion = function (req, res) {
             res.status(500).send(err)
         } 
         console.log('calificacionn');
-        console.log(office);
-        if(office.calificaciones==null){
-            office.calificaciones=new Array();
+        console.log(office[0]);
+        if(office[0].calificaciones==null){
+            office[0].calificaciones=new Array();
         }        
-        office.calificaciones.push({idOffice:req.body.idOffice,idUser:req.body.idUser,puntaje:req.body.puntaje});  
+        office[0].calificaciones.push({idOffice:req.body.idOffice,idUser:req.body.idUser,puntaje:req.body.puntaje});  
         console.log('calificacionn2');
-        console.log(office);
+        console.log(office[0]);
 
 
 
