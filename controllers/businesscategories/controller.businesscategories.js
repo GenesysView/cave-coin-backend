@@ -10,7 +10,7 @@ module.exports.index = function (req, res) {
         console.log(businessCategory);
          
         res.send(businessCategory);
-    });
+    }).sort('name');
 }
 
 module.exports.show = function (req, res) {
