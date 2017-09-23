@@ -209,7 +209,7 @@ router.get('/getpaymentmethods', function (req, res) {
                            },
                            "type": "AUTHORIZATION_AND_CAPTURE",
                            "paymentMethod": "BALOTO",
-                           "expirationDate": "2017-10-10T00:00:00",
+                           "expirationDate": f,
                            "paymentCountry": "CO",
                            "ipAddress": "127.0.0.1"
                         },
