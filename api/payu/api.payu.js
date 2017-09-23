@@ -184,7 +184,7 @@ router.get('/getpaymentmethods', function (req, res) {
                               "notifyUrl": "http://www.test.com/confirmation",
                               "additionalValues": {
                                  "TX_VALUE": {
-                                    "value": 5000,
+                                    "value": 9000,
                                     "currency": "COP"
                               },
                                  "TX_TAX": {
