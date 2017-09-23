@@ -32,7 +32,7 @@ router.get('/getconection', function (req, res) {
 router.get('/getpaymentmethods', function (req, res) {
     
           request({
-            uri: "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi",
+            uri: "https://api.payulatam.com/payments-api/4.0/service.cgi",
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
