@@ -160,7 +160,7 @@ router.get('/getpaymentmethods', function (req, res) {
         });
 
 
-        router.get('/sendefectypay', function (req, res) {
+        router.post('/sendefectypay', function (req, res) {
             var f=new Date();
             f.setDate(f.getDate() + 8);                        
             var fTemp=f.getFullYear()+''+f.getMonth()+''+f.getDate()+''+f.getHours()+''+f.getMinutes()+''+f.getSeconds();
