@@ -18,8 +18,8 @@ router.get('/getconection', function (req, res) {
             "language": "en",
             "command": "PING",
             "merchant": {
-                "apiLogin": "24c8ff4eaae7e5a",
-                "apiKey": "69d2a2dikbcd5kei4a94nvtl6u"
+                "apiLogin": "Zo3D7f1CxBIo2O3s",
+                "apiKey": "bCM9tus76HXDhQSX4CH75m7mKR"
             }
          }
       }, function(error, response, body) {
@@ -42,8 +42,8 @@ router.get('/getpaymentmethods', function (req, res) {
                 "language": "en",
                 "command": "GET_PAYMENT_METHODS",
                 "merchant": {
-                    "apiLogin": "24c8ff4eaae7e5a",
-                    "apiKey": "69d2a2dikbcd5kei4a94nvtl6u"
+                    "apiLogin": "Zo3D7f1CxBIo2O3",
+                    "apiKey": "bCM9tus76HXDhQSX4CH75m7mKR"
                 }
              }
           }, function(error, response, body) {
@@ -162,7 +162,7 @@ router.get('/getpaymentmethods', function (req, res) {
         router.get('/sendefectypay', function (req, res) {
             
                   request({
-                    uri: "https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi",
+                    uri: "https://api.payulatam.com/payments-api/4.0/service.cgi",
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json',
@@ -171,18 +171,18 @@ router.get('/getpaymentmethods', function (req, res) {
                         "language": "es",
                         "command": "SUBMIT_TRANSACTION",
                         "merchant": {
-                           "apiKey": "4Vj8eK4rloUd272L48hsrarnUA",
-                           "apiLogin": "pRRXKOl8ikMmt9u"
+                           "apiKey": "Zo3D7f1CxBIo2O3s",
+                           "apiLogin": "bCM9tus76HXDhQSX4CH75m7mKR"
                         },
                         "transaction": {
                            "order": {
-                              "accountId": "512321",
-                              "referenceCode": "TestPayU",
+                              "accountId": "679475",
+                              "referenceCode": "0001",
                               "description": "payment test",
                               "language": "es",
-                              "signature": "7ee7cf808ce6a39b17481c54f2c57acc",
+                              "signature": "PK63d20Gk52H46E4054Xl3f5Fi",
                               "notifyUrl": "http://www.test.com/confirmation",
-                              "additionalValues": {
+/*                               "additionalValues": {
                                  "TX_VALUE": {
                                     "value": 20000,
                                     "currency": "COP"
@@ -195,7 +195,7 @@ router.get('/getpaymentmethods', function (req, res) {
                                     "value": 16806,
                                     "currency": "COP"
                               }
-                              },
+                              }, */
                               "buyer": {
                                  "fullName": "First name and last name",
                                  "emailAddress": "buyer_test@test.com"
