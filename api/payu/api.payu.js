@@ -1,5 +1,6 @@
 var request = require("request");
 var express = require('express');
+var md5 = require('md5');
 
 
 var router = express.Router();
@@ -160,6 +161,10 @@ router.get('/getpaymentmethods', function (req, res) {
 
 
         router.get('/sendefectypay', function (req, res) {
+            var f=new Date();
+            var fTemp=f.getFullYear()+''+f.getMonth()+''+f.getDate()+''+f.getHours()+''+f.getMinutes()+''+f.getSeconds();
+            console.log(fTemp);
+            var signature=md5("bCM9tus76HXDhQSX4CH75m7mKR~679475~"+fTemp+"~9000~COP");            
             
                   request({
                     uri: "https://api.payulatam.com/payments-api/4.0/service.cgi",
@@ -177,10 +182,10 @@ router.get('/getpaymentmethods', function (req, res) {
                         "transaction": {
                            "order": {
                               "accountId": "",
-                              "referenceCode": "0005",
+                              "referenceCode": fTemp,
                               "description": "payment test",
                               "language": "es",
-                              "signature": "ACF185282CF1868B96BE9542F38E29D4",
+                              "signature": signature,
                               "notifyUrl": "http://www.test.com/confirmation",
                               "additionalValues": {
                                  "TX_VALUE": {
