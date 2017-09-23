@@ -171,13 +171,13 @@ router.get('/getpaymentmethods', function (req, res) {
                         "language": "es",
                         "command": "SUBMIT_TRANSACTION",
                         "merchant": {
-                           "apiKey": "Zo3D7f1CxBIo2O3s",
-                           "apiLogin": "bCM9tus76HXDhQSX4CH75m7mKR"
+                            "apiLogin": "Zo3D7f1CxBIo2O3s",
+                            "apiKey": "bCM9tus76HXDhQSX4CH75m7mKR"
                         },
                         "transaction": {
                            "order": {
                               "accountId": "512321",
-                              "referenceCode": "0001",
+                              "referenceCode": "TestPayU",
                               "description": "payment test",
                               "language": "es",
                               "signature": "7ee7cf808ce6a39b17481c54f2c57acc",
