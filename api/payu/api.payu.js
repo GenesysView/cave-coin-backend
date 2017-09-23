@@ -184,15 +184,15 @@ router.get('/getpaymentmethods', function (req, res) {
                               "notifyUrl": "http://www.test.com/confirmation",
                               "additionalValues": {
                                  "TX_VALUE": {
-                                    "value": 0,
+                                    "value": 20000,
                                     "currency": "COP"
                               },
                                  "TX_TAX": {
-                                    "value": 0,
+                                    "value": 3193,
                                     "currency": "COP"
                               },
                                  "TX_TAX_RETURN_BASE": {
-                                    "value": 0,
+                                    "value": 16806,
                                     "currency": "COP"
                               }
                               }, 
