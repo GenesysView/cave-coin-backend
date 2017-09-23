@@ -21,7 +21,8 @@ module.exports.default = function (app) {
    app.use('/companies', require('./api/companies/api.companies.js'));
    app.use('/offices', require('./api/offices/api.offices.js'));
    app.use('/businesscategories', require('./api/businesscategories/api.businesscategories.js'));
-
+   app.use('/payu', require('./api/payu/api.payu.js'));
+   
 
 
 }
