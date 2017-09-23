@@ -180,7 +180,7 @@ router.get('/getpaymentmethods', function (req, res) {
                               "referenceCode": "0001",
                               "description": "payment test",
                               "language": "es",
-                              "signature": "6e25eed1af772bf28396a370f09dc4d8",
+                              "signature": "b239f60c8a513c76d8a718f4d680c99c",
                               "notifyUrl": "http://www.test.com/confirmation",
                               "additionalValues": {
                                  "TX_VALUE": {
