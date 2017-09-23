@@ -177,10 +177,10 @@ router.get('/getpaymentmethods', function (req, res) {
                         "transaction": {
                            "order": {
                               "accountId": "",
-                              "referenceCode": "face1",
+                              "referenceCode": "0001",
                               "description": "payment test",
                               "language": "es",
-                              "signature": "b71495bfaf6764a1ccbe12201df837e9",
+                              "signature": "6e25eed1af772bf28396a370f09dc4d8",
                               "notifyUrl": "http://www.test.com/confirmation",
                               "additionalValues": {
                                  "TX_VALUE": {
