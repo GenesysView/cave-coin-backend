@@ -42,8 +42,8 @@ router.get('/getpaymentmethods', function (req, res) {
                 "language": "en",
                 "command": "GET_PAYMENT_METHODS",
                 "merchant": {
-                    "apiLogin": "pRRXKOl8ikMmt9u",
-                    "apiKey": "4Vj8eK4rloUd272L48hsrarnUA"
+                    "apiLogin": "24c8ff4eaae7e5a",
+                    "apiKey": "69d2a2dikbcd5kei4a94nvtl6u"
                 }
              }
           }, function(error, response, body) {
