@@ -190,7 +190,7 @@ router.get('/getpaymentmethods', function (req, res) {
                               "notifyUrl": "http://www.test.com/confirmation",
                               "additionalValues": {
                                  "TX_VALUE": {
-                                    "value": 20000,
+                                    "value": 9000,
                                     "currency": "COP"
                               },
                                  "TX_TAX": {
@@ -208,7 +208,7 @@ router.get('/getpaymentmethods', function (req, res) {
                               }
                            },
                            "type": "AUTHORIZATION_AND_CAPTURE",
-                           "paymentMethod": "EFECTY",
+                           "paymentMethod": "BALOTO",
                            "expirationDate": f,
                            "paymentCountry": "CO",
                            "ipAddress": "127.0.0.1"
