@@ -162,8 +162,8 @@ router.get('/getpaymentmethods', function (req, res) {
 
         router.get('/sendefectypay', function (req, res) {
             var f=new Date();
+            f.setDate(f.getDate() + 8);                        
             var fTemp=f.getFullYear()+''+f.getMonth()+''+f.getDate()+''+f.getHours()+''+f.getMinutes()+''+f.getSeconds();
-            fTemp.setDate(fTemp.getDate() + 8);            
             console.log(fTemp);
             var signature=md5("bCM9tus76HXDhQSX4CH75m7mKR~679475~"+fTemp+"~9000~COP");            
             
