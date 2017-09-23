@@ -18,7 +18,7 @@ router.get('/getconection', function (req, res) {
             "language": "en",
             "command": "PING",
             "merchant": {
-                "apiLogin": "Zo3D7f1CxBIo2O3s",
+                "apiLogin": "Zo3D7f1CxBIo2O3",
                 "apiKey": "bCM9tus76HXDhQSX4CH75m7mKR"
             }
          }
@@ -171,7 +171,7 @@ router.get('/getpaymentmethods', function (req, res) {
                         "language": "es",
                         "command": "SUBMIT_TRANSACTION",
                         "merchant": {
-                            "apiLogin": "Zo3D7f1CxBIo2O3s",
+                            "apiLogin": "Zo3D7f1CxBIo2O3",
                             "apiKey": "bCM9tus76HXDhQSX4CH75m7mKR"
                         },
                         "transaction": {
