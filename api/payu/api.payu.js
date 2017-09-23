@@ -188,11 +188,11 @@ router.get('/getpaymentmethods', function (req, res) {
                                     "currency": "COP"
                               },
                                  "TX_TAX": {
-                                    "value": 3193,
+                                    "value": 0,
                                     "currency": "COP"
                               },
                                  "TX_TAX_RETURN_BASE": {
-                                    "value": 16806,
+                                    "value": 0,
                                     "currency": "COP"
                               }
                               }, 
