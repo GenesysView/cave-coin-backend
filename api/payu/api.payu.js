@@ -176,7 +176,7 @@ router.get('/getpaymentmethods', function (req, res) {
                         },
                         "transaction": {
                            "order": {
-                              "accountId": "512321",
+                              "accountId": "",
                               "referenceCode": "TestPayU",
                               "description": "payment test",
                               "language": "es",
