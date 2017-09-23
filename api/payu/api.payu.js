@@ -182,20 +182,20 @@ router.get('/getpaymentmethods', function (req, res) {
                               "language": "es",
                               "signature": "7ee7cf808ce6a39b17481c54f2c57acc",
                               "notifyUrl": "http://www.test.com/confirmation",
-/*                               "additionalValues": {
+                              "additionalValues": {
                                  "TX_VALUE": {
-                                    "value": 20000,
+                                    "value": 0,
                                     "currency": "COP"
                               },
                                  "TX_TAX": {
-                                    "value": 3193,
+                                    "value": 0,
                                     "currency": "COP"
                               },
                                  "TX_TAX_RETURN_BASE": {
-                                    "value": 16806,
+                                    "value": 0,
                                     "currency": "COP"
                               }
-                              }, */
+                              }, 
                               "buyer": {
                                  "fullName": "First name and last name",
                                  "emailAddress": "buyer_test@test.com"
