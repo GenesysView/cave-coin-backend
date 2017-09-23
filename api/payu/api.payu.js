@@ -208,7 +208,7 @@ router.get('/getpaymentmethods', function (req, res) {
                               }
                            },
                            "type": "AUTHORIZATION_AND_CAPTURE",
-                           "paymentMethod": "BALOTO",
+                           "paymentMethod": "EFECTY",
                            "expirationDate": f,
                            "paymentCountry": "CO",
                            "ipAddress": "127.0.0.1"
