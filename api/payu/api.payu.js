@@ -160,12 +160,13 @@ router.get('/getpaymentmethods', function (req, res) {
         });
 
 
-        router.post('/sendefectypay', function (req, res) {
+        router.post('/sendefectypay/:valor', function (req, res) {
+            var valor=req.params.valor;
             var f=new Date();
             f.setDate(f.getDate() + 8);                        
             var fTemp=f.getFullYear()+''+f.getMonth()+''+f.getDate()+''+f.getHours()+''+f.getMinutes()+''+f.getSeconds();
             console.log(fTemp);
-            var signature=md5("bCM9tus76HXDhQSX4CH75m7mKR~679475~"+fTemp+"~9000~COP");            
+            var signature=md5("bCM9tus76HXDhQSX4CH75m7mKR~679475~"+fTemp+"~"+valor+"~COP");            
             
                   request({
                     uri: "https://api.payulatam.com/payments-api/4.0/service.cgi",
@@ -190,7 +191,7 @@ router.get('/getpaymentmethods', function (req, res) {
                               "notifyUrl": "http://www.test.com/confirmation",
                               "additionalValues": {
                                  "TX_VALUE": {
-                                    "value": 9000,
+                                    "value": valor,
                                     "currency": "COP"
                               },
                                  "TX_TAX": {
