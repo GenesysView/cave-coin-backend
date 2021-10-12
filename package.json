@@ -10,7 +10,9 @@
   "author": "miguel angel asprilla - 3154292549 - softdev",
   "license": "MIT",
   "dependencies": {
+    "@binance-chain/javascript-sdk": "^4.2.0",
     "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.10",
     "express": "^4.15.2",
     "isomorphic-fetch": "2.2.1",
     "jsdom": "9.4.2",

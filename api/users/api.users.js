@@ -4,6 +4,7 @@ console.log('user');
 
 var router = express.Router();
 router.get('/', controller.index);
+router.get('/bnb', controller.bnb);
 router.get('/:id', controller.show);
 router.post('/', controller.create);
 router.put('/picture/:id', controller.updatePicture);

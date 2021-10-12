@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 var db = {
     Mongoose:mongoose,
-    mongoose: mongoose.connect('mongodb://facemapp07:facemapp07@ds119044.mlab.com:19044/heroku_ksns66ss')
+    mongoose: mongoose.connect('mongodb://localhost:27017/caveio')
 };
 
 
