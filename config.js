@@ -30,7 +30,8 @@ if (process.env.NODE_ENV == 'test') {
 var   config = {
   server: {
     host: 'localhost',
-    port: process.env.PORT || 3010
+    port: process.env.PORT || 3010,
+    securePort: process.env.PORT || 3011
   },
   secret: 'chatsure2017'
 }
