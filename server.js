@@ -11,13 +11,14 @@ var db = require('./sqldb');
 var https = require('https');
 var fs = require('fs');
 
+var server = https.createServer({
+  key: fs.readFileSync('/root/server.key'),
+  cert: fs.readFileSync('/root/cavecoin_app.crt')
+}, app);
 
 app.set('superSecret', config.secret);
 function StartServer() {
-  var server = https.createServer({
-    key: fs.readFileSync('/root/server.key'),
-    cert: fs.readFileSync('/root/cavecoin_app.crt')
-  }, app);
+
   server.listen(config.server.securePort, config.server.host);
   server.on('error', onError);
   server.on('listening', onListening);
