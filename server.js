@@ -10,6 +10,9 @@ var routes = require('./routes.js').default(app);
 var db = require('./sqldb');
 var https = require('https');
 var fs = require('fs');
+var debug = require('debug')('Server');
+
+
 
 var server = https.createServer({
   key: fs.readFileSync('/root/server.key'),
