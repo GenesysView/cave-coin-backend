@@ -4,8 +4,10 @@ console.log('user');
 
 var router = express.Router();
 router.get('/', controller.index);
+router.get('/updateListTokens', controller.updateListTokens);
+router.post('/getOHLCVHistorical', controller.getOHLCVHistorical);
 router.get('/:id', controller.show);
-router.get('/searchByNameAndSymbol/:item', controller.searchByNameAndSymbol);
+router.get('/searchByNameAndSymbol/:item/:platform', controller.searchByNameAndSymbol);
 router.get('/byToken/:token', controller.byToken);
 
 module.exports = router;

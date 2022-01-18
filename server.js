@@ -1,4 +1,5 @@
 var express = require('express');
+var http = require('http');
 var app = express();
 var bodyParser = require('body-parser');
 //configura la decodifcacion y codificacion de json para los rest
@@ -11,24 +12,41 @@ var db = require('./sqldb');
 var https = require('https');
 var fs = require('fs');
 var debug = require('debug')('Server');
+const WebSocket = require('ws');
 
+var serverIO = http.createServer(app);
 
-
-var server = https.createServer({
-  key: fs.readFileSync('/root/server.key'),
-  cert: fs.readFileSync('/root/cavecoin_app.crt')
-}, app);
-
+// var server = https.createServer({
+//   key: fs.readFileSync('/root/server.key'),
+//   cert: fs.readFileSync('/root/cavecoin_app.crt')
+// }, app);
+console.log(__dirname + '/images');
+app.use('/public', express.static(__dirname + '/images'));
 app.set('superSecret', config.secret);
 function StartServer() {
 
-  server.listen(config.server.securePort, config.server.host);
-  server.on('error', onError);
-  server.on('listening', onListening);
+  // server.listen(config.server.securePort, config.server.host);
+  // server.on('error', onError);
+  // server.on('listening', onListening);
 
-  app.listen(config.server.port, function () {
+  var server = app.listen(config.server.port, function () {
     console.log('Example app listening on port ' + config.server.port);
-    //var ruta=require('./models/users/model.users');
+    const socket = require('./socket').server(server);
+  });
+  const Web3 = require('web3');
+  console.log('mensaje principal');
+  console.log(parseInt('0x61706b80'));
+  console.log('fin mensaje principal');
+
+
+
+  const ws = new WebSocket('wss://fstream.binance.com/ws/adabusd@trade');
+
+  ws.on('message', (data) => {
+    if (data) {
+      const trade = JSON.parse(data); // parsing single-trade record
+      // console.log(trade);
+    }
   });
 }
 
@@ -74,7 +92,7 @@ function onError(error) {
 
 function onListening() {
   var addr = server.address();
-  console.log('---addr--',addr);
+  console.log('---addr--', addr);
   var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
